@@ -1,2 +1,14 @@
 language: csharp
 solution: ConsoleApplication1.sln
+
+before-script:
+  - git clone https://github.com/nelsonsar/StyleCop.Baboon
+  - cd StyleCop.Baboon
+  - hg clone https://hg.codeplex.com/stylecop
+  - nuget restore
+  - xbuild StyleCop.Baboon.sln 
+  - export STYLECOP=StyleCop.Baboon/StyleCop.Baboon/bin/Debug/StyleCop.Baboon.exe
+  
+script:
+  - mono $STYLECOP StyleCop.Baboon/Settings.StyleCop . StyleCop.Baboon
+  - xbuild ConsoleApplication1.sln
