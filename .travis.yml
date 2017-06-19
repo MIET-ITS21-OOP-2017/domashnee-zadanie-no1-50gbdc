@@ -1,7 +1,7 @@
 language: csharp
 solution: ConsoleApplication1.sln
 
-before-script:
+before_script:
   - git clone https://github.com/nelsonsar/StyleCop.Baboon
   - cd StyleCop.Baboon
   - hg clone https://hg.codeplex.com/stylecop
