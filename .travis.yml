@@ -8,6 +8,7 @@ before_script:
   - nuget restore
   - xbuild StyleCop.Baboon.sln 
   - export STYLECOP=StyleCop.Baboon/StyleCop.Baboon/bin/Debug/StyleCop.Baboon.exe
+  - cd ..
   
 script:
   - mono $STYLECOP StyleCop.Baboon/Settings.StyleCop . StyleCop.Baboon
