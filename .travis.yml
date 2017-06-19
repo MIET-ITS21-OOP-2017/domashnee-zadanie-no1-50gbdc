@@ -11,5 +11,5 @@ before_script:
   - cd ..
   
 script:
-  - mono $STYLECOP StyleCop.Baboon/Settings.StyleCop . StyleCop.Baboon
+  - mono $STYLECOP StyleCop.Baboon/Settings.StyleCop . ./StyleCop.Baboon
   - xbuild ConsoleApplication1.sln
